@@ -29,7 +29,10 @@ console.log(removeCharacterFromString('hello', 3))
 /* 4. Create a function to find and return the largest of three given integers. */
 
 const findBiggestNumber = (num1, num2, num3) => {
-    return num1 > num2 && num1 > num3 ? num1 : num2 > num1 && num2 > num3 ? num2 : num3 > num1 && num3 > num2 ? num3 : "There isn't a single greatest Number"
+    return num1 > num2 && num1 > num3 ? num1 : 
+    num2 > num1 && num2 > num3 ? num2 : 
+    num3 > num1 && num3 > num2 ? num3 : 
+    "There isn't a single greatest Number"
 }
 
 console.log(findBiggestNumber(5, 4, 5))
@@ -38,9 +41,17 @@ console.log(findBiggestNumber(5, 4, 5))
 /* 5. Create a function to check if two numbers are in the range 40-60 or 70-100. 
     Return `true` if they do, return `false` if one (or both) don't. */
 
+const checkNumbersInRange = (num1, num2) => {
+    return ((num1 >= 40 && num1 <= 60) || (num1 >= 70 && num1 <=100)) && ((num2 >= 40 && num2 <= 60) || (num2 >= 70 && num2 <=100)) ? true : false
+}
+
+console.log(checkNumbersInRange(50, 70))
+
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
+
+
 
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
