@@ -12,6 +12,16 @@
 
 /* 4. Given a string (as parameter), return `true` if the string is a palindrome or `false` if it is not. Include spaces and punctuation. */
 
+const isPalindrome = string => {
+    const originalString = string
+    const letters = string.split('')
+    const newStringArray = []
+    letters.forEach(letter => newStringArray.unshift(letter))
+    const reversedString = newStringArray.join('')
+    return (originalString === reversedString)
+}
+
+console.log(isPalindrome('hannah'))
 
 /* 5. Given an integer (as parameter), return an integer which digitas are the same as the original number, but reversed.
     Ex: 189 ⇒ 981 */
