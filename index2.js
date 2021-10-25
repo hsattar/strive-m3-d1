@@ -5,6 +5,19 @@
     Do not consider spaces or punctuation, make the whole word lower case. 
     Return `true` if the words are anagram, return `false` if they aren't. */
 
+const checkIfAnagram = (string1, string2) => {
+    let anagram = true
+    if (string1.length !== string2.length) return anagram = false
+    const string1Letters = string1.split('')
+    const string2Letters = string2.split('')
+    string1Letters.forEach(letter => {
+        const checkString2 = string2Letters.indexOf(letter)
+        if (checkString2 < 0) { anagram = false }
+    })
+    return anagram
+}
+
+console.log(checkIfAnagram('olleh', 'hello'))
 
 /* 3. Given a word and a list of possible anagrams (both passed as parameters), return the correct list of anagrams: 
     Ex. "listen" is the word, ["enlist", "google", "inlets"] are the possibilities: the output should be ["enlist", "inlets"]
@@ -21,7 +34,7 @@ const isPalindrome = string => {
     return (originalString === reversedString)
 }
 
-console.log(isPalindrome('hannah'))
+console.log(isPalindrome('hamnah'))
 
 /* 5. Given an integer (as parameter), return an integer which digitas are the same as the original number, but reversed.
     Ex: 189 ⇒ 981 */
