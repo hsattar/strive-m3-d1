@@ -18,8 +18,21 @@ console.log(checkIntegers50(25, 25))
 
 /* 3. Create a function to remove a character at a specified position from a given string: pass the position and the string as parameters, return the new string. */
 
+const removeCharacterFromString = (string, charPosition) => {
+    const string1 = string.substr(0, charPosition)
+    const string2 = string.substr(charPosition + 1)
+    return string1.concat(string2)
+}
+
+console.log(removeCharacterFromString('hello', 3))
 
 /* 4. Create a function to find and return the largest of three given integers. */
+
+const findBiggestNumber = (num1, num2, num3) => {
+    return num1 > num2 && num1 > num3 ? num1 : num2 > num1 && num2 > num3 ? num2 : num3 > num1 && num3 > num2 ? num3 : "There isn't a single greatest Number"
+}
+
+console.log(findBiggestNumber(5, 4, 5))
 
 
 /* 5. Create a function to check if two numbers are in the range 40-60 or 70-100. 
