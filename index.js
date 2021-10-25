@@ -89,9 +89,11 @@ console.log(addNumbersInArray(numbersArray))
     Return `true` is it does, `false` if it doesn't. */
 
 const checkIfArrayContains1Or3 = arr => {
-    arr.some((value) => {
-        return value === 1
+    let trueOrFalse = false
+    arr.forEach(element => {
+        if (element === 1 || element === 3) { trueOrFalse = true }
     })
+    return trueOrFalse
 }
 
 console.log(checkIfArrayContains1Or3([2, 4]))
@@ -99,6 +101,17 @@ console.log(checkIfArrayContains1Or3([2, 4]))
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
     Return `true` if it doesn't, `false` if it does. */ 
+
+const checkIfArrayDoesNotContain1Or3 = arr => {
+    let trueOrFalse = true
+    arr.forEach(element => {
+        if (element !== 1 || element !== 3) { trueOrFalse = false }
+    })
+    return trueOrFalse
+}
+
+console.log(checkIfArrayDoesNotContain1Or3([2, 3]))
+
 
 
 /* 11. Create a function to find the longest string from a given array of strings. 
@@ -210,5 +223,17 @@ console.log(calculateSum(50, 35))
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
 
+
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
+
+const createAcronym = phrase => {
+    let acronym = ''
+    const phraseWords = phrase.split(' ')
+    phraseWords.forEach(word => {
+        acronym += word.charAt(0)
+    })
+    return acronym.toUpperCase()
+}
+
+console.log(createAcronym('British Broadcasting Company'))
