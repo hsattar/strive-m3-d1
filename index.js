@@ -88,6 +88,14 @@ console.log(addNumbersInArray(numbersArray))
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
 
+const checkIfArrayContains1Or3 = arr => {
+    arr.some((value) => {
+        return value === 1
+    })
+}
+
+console.log(checkIfArrayContains1Or3([2, 4]))
+
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
     Return `true` if it doesn't, `false` if it does. */ 
@@ -95,6 +103,21 @@ console.log(addNumbersInArray(numbersArray))
 
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */ 
+
+const arrayOfStrings = ['hello', 'world', 'longest', 'short']
+const findLongestString = arr => {
+    let longestStringLength = 0
+    let longestString = ''
+    arr.forEach(string => {
+        if (string.length > longestStringLength) {
+            longestStringLength = string.length
+            longestString = string
+        }
+    })
+    return longestString
+}
+
+console.log(findLongestString(arrayOfStrings))
 
 
 /* 12. Create a function to find the types of a given angle:
