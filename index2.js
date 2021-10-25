@@ -23,6 +23,16 @@ console.log(checkIfAnagram('olleh', 'hello'))
     Ex. "listen" is the word, ["enlist", "google", "inlets"] are the possibilities: the output should be ["enlist", "inlets"]
 */
 
+const checkPossibleAnagrams = (string, array) => {
+    const anagramOptions = []
+    array.forEach(word => {
+        if (checkIfAnagram(string, word)) { anagramOptions.push(word) }
+    })
+    return anagramOptions
+}
+
+console.log(checkPossibleAnagrams('word', ['rodw', 'wrong', 'rowd']))
+
 /* 4. Given a string (as parameter), return `true` if the string is a palindrome or `false` if it is not. Include spaces and punctuation. */
 
 const isPalindrome = string => {
