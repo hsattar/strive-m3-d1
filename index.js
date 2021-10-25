@@ -179,9 +179,26 @@ console.log(postiveAndNegative(-3, -5))
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
 
+const convertStringCase = string => {
+    if (string.length <= 3) return string.toUpperCase()
+    let lowercase = string.substr(0, string.length - 3)
+    lowercase = lowercase.toLowerCase()
+    let uppercase = string.substr(string.length - 3, string.length)
+    uppercase = uppercase.toUpperCase()
+    return lowercase.concat(uppercase)
+}
+
+console.log(convertStringCase('Hello'))
 
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
+
+const calculateSum = (num1, num2) => {
+    if ((num1 + num2) >= 50 && (num1 + num2) <= 80) return 65
+    return 80
+}
+
+console.log(calculateSum(50, 35))
 
 
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
