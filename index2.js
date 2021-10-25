@@ -111,6 +111,24 @@ console.log(reverseString('hello'))
     array: [1, 2, 3, 4, 5], chunk size: 4 → [[ 1, 2, 3, 4], [5]]
 */
 
+const splitArrayIntoChunks = (array, chunkSize) => {
+    const finalOutput = []
+    const totalArraysNeeded = Math.ceil(array.length / chunkSize)
+    while (array.length > 0) {
+        for (let i = 0; i < totalArraysNeeded; i++) {
+            const arrayChunk = []
+            for (let j = 0; j < chunkSize; j++) {
+                if (array.length > 0) {
+                    arrayChunk.push(array.shift())
+                } 
+            }
+            finalOutput.push(arrayChunk)
+        }
+    }
+    return finalOutput
+}
+
+console.log(splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))
 
 /* 9. Write a function that accepts a positive number X as parameter. 
 The function should console.log a pyramid shape with N levels built using the `#` character. 
