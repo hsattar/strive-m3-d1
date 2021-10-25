@@ -64,9 +64,25 @@ console.log(createNewString('hello', 3))
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
 
+const displayAddress = (city) => {
+    if (city.substr(0, 3) === 'Los' || city.substr(0, 3) === 'New') {
+        return city
+    }
+    return false
+}
+
+console.log(displayAddress('New York'))
 
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
+
+const numbersArray = [10, 20, 30]
+
+const addNumbersInArray = arr => {
+    return arr.reduce((prev, curr) => prev + curr, 0)
+}
+
+console.log(addNumbersInArray(numbersArray))
 
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
