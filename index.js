@@ -1,7 +1,19 @@
 /* 1. Create a function to calculate the sum of the two given integers. If the two values are the same, return triple their sum. */
 
+const sumOfTwoInetegers = (num1, num2) => {
+    return num1 + num2
+}
+
+console.log(sumOfTwoInetegers(3, 4))
+
 
 /* 2. Create a function to check two given integers. Return `true` if one of them is 50 or if their sum is 50. */
+
+const checkIntegers50 = (num1, num2) => {
+    return num1 === 50 || num2 === 50 || num1 + num2 === 50 ? true: false
+}
+
+console.log(checkIntegers50(25, 25))
 
 
 /* 3. Create a function to remove a character at a specified position from a given string: pass the position and the string as parameters, return the new string. */
