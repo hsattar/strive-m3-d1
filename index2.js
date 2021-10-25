@@ -1,5 +1,18 @@
 /* 1. Given a string (as a parameter), return the character that is most commonly used. */
 
+// TODO: NEED TO FINISH 
+
+const mostCommonCharacter = string => {
+    const storage = []
+    const letters = string.split('')
+    letters.forEach(letter => {
+        const letterObj = { [letter] : 1 }
+        storage.push(letterObj)
+    })
+    return storage
+}
+
+console.log(mostCommonCharacter('hello'))
 
 /* 2. Check if two strings (passed as parameters) are anagrams of each other. 
     Do not consider spaces or punctuation, make the whole word lower case. 
