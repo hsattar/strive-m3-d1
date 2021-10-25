@@ -16,6 +16,16 @@
 /* 5. Given an integer (as parameter), return an integer which digitas are the same as the original number, but reversed.
     Ex: 189 ⇒ 981 */
 
+const reverseNumber = num => {
+    const string = num.toString()
+    const numArray = string.split('')
+    const newArray = []
+    numArray.forEach(num => newArray.unshift(num))
+    const reversedNumber = newArray.join('')
+    return reversedNumber
+}
+
+console.log(reverseNumber(189))
 
 /* 6. Write a function that takes a positive number X as a parameter. The function should output (as console.log) a step shaped string with X level usign the `#` character. Make sure the steps are on the right hand side:
 
