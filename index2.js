@@ -47,6 +47,17 @@ console.log(reverseNumber(189))
 /* 7. Create a function that, given a string as a parameter, returns a new string which is the original string, but reversed: 
 "hello" ⇒ "olleh" */
 
+const reverseString = string => {
+    const letters = string.split('')
+    const reversedOrder = []
+    letters.forEach(letter => {
+        reversedOrder.unshift(letter)
+    })
+    const reversedString = reversedOrder.join('')
+    return reversedString
+}
+
+console.log(reverseString('hello'))
 
 /* 8. Create a function that takes an array and a "chuck size" as parameters. 
     Divide the array into subarrays with the "chunk size" as lenght: 
