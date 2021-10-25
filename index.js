@@ -222,7 +222,17 @@ console.log(calculateSum(50, 35))
     ⚠️ The factor is an integer which evenly divides a number without leaving a remainder. One number can have more than one factor, in that case you should return both names. 
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
+const createNumIntoString = num => {
+    if (num % 3 === 0 && num % 5 === 0 && num % 7 === 0 ) return 'Diego Riccardo Stefano'
+    if (num % 3 === 0 && num % 5 === 0) return 'Diego Riccardo'
+    if (num % 3 === 0 && num % 7 === 0) return 'Diego Stefano'
+    if (num % 5 === 0 && num % 7 === 0) return 'Riccardo Stefano'
+    if (num % 3 === 0) return 'Diego'
+    if (num % 5 === 0) return 'Riccardo'
+    if (num % 7 === 0) return 'Stefano'
+}
 
+console.log(createNumIntoString(105))
 
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
