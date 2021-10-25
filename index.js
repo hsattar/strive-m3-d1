@@ -51,8 +51,15 @@ console.log(checkNumbersInRange(50, 70))
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
 
+const createNewString = (string, repeat) => {
+    let finalString = ''
+    for (let i = 0; i < repeat; i++) {
+        finalString = finalString.concat(string)
+    }
+    return finalString
+}
 
-
+console.log(createNewString('hello', 3))
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
